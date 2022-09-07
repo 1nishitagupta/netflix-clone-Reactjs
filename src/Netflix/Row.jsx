@@ -26,7 +26,7 @@ function Row(props) {
       {movies.map((pic) => {
         let path = pic.poster_path;
         // console.log(path);
-        return <img style={w} src={`${img_base_path}${path}`} />;
+        return <img style={w}  src={`${img_base_path}${path}`} />;
       })}
     </div>
   );
