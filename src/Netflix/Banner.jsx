@@ -28,8 +28,8 @@ function Banner(props) {
     };
 
     return (
-        <header style={styles}>
-            <div>
+        <header style={styles} >
+            <div className="banner container">
                 <h1>{movies.original_title}</h1>
                 <div>
                     <button><a href="#">Play Now</a></button>

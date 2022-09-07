@@ -4,10 +4,12 @@ import Row from "./Row";
 import requests from "./requests";
 import Banner from "./Banner";
 import "./netflix.css";
+import Navbar from "./Navbar";
 
 function Netflix() {
   return (
     <>
+    <Navbar />
       <Banner endPoint={requests.fetchTrending} />
       <div className="netflix">
         <Row

@@ -5,4 +5,53 @@
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
   }
+
+  .container{
+    width: 1400px;
+    margin: auto;
+  }
+
+  .navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+  }
+  .navbar .logo{
+    height: 50px;
+  }
+
+  .banner{
+    /* padding: 300px 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+
+  }
+  .banner h1{
+    font-size: 5rem;
+    padding-bottom: 20px;
+  }
+  .banner button a{
+    text-decoration: none;
+    color: inherit;
+  }
+  .banner button{
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .banner p{
+    padding: 20px 0;
+    width: 400px;
+  }
+
+
   
