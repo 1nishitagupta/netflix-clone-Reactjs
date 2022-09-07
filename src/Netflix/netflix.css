@@ -18,14 +18,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    padding: 20px 40px;
+    z-index: 22;
   }
   .navbar .logo{
     height: 50px;
   }
+  header{
+    position: relative;
+  }
+  header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    /* z-index: 2; */
+  }
 
   .banner{
     /* padding: 300px 0; */
+    z-index: 11;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,6 +1,9 @@
 import React from 'react'
 
 function Navbar() {
+    
+
+
   return (
     <div className='navbar'>
         <img src="images/netflix-logo.png" alt="logo" className='logo' />

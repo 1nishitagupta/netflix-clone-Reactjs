@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function Banner(props) {
+    const [movies, setMovies] = useState([]);
     const img_base_path = "https://image.tmdb.org/t/p/original";
     const base_url = "https://api.themoviedb.org/3";
 
-    const [movies, setMovies] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
@@ -13,12 +13,13 @@ function Banner(props) {
             //   console.log(randomImage);
             setMovies(
                 randomImage.data.results[Math.floor(Math.random() * randomImage.data.results.length)]
-            );
+                
+            );             
         }
 
         fetchData();
     }, []);
-    console.log(movies);
+    // console.log(movies);
 
     const styles = {
         backgroundImage: `url(${img_base_path}${movies.backdrop_path})`,
@@ -26,10 +27,12 @@ function Banner(props) {
         backgroundSize: "cover",
         backgroundPosition: "center"
     };
-
+    // console.log(typeof(movies.overview))
     return (
         <header style={styles} >
             <div className="banner container">
+                { (movies) &&
+                    <>
                 <h1>{movies.original_title}</h1>
                 <div>
                     <button><a href="#">Play Now</a></button>
@@ -37,8 +40,10 @@ function Banner(props) {
 
                 </div>
                 <p>
-                    {movies.overview}
+                    {movies.overview && movies.overview.slice(0,200)+'...'}                    
                 </p>
+                </>
+                }
             </div>
 
         </header>
