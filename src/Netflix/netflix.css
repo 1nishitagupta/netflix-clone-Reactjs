@@ -70,4 +70,20 @@
   }
 
 
-  
+  .row{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .row::-webkit-scrollbar{
+    display: none;
+  }
+
+  .movie-row{
+    margin-left: 1rem;
+  }
+  .movie-row img{
+    margin: 0 5px;
+    max-height: 250px;
+  }
